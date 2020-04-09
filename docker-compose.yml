@@ -1,0 +1,11 @@
+version: '3.4'
+services:
+  python: #docker run -it -v ${PWD}:/work -w /work -p 8888:8888 jaytarang92/docker-python-tornado-hello-world 
+    container_name: python_tornado
+    image: jaytarang92/docker-python-tornado-hello-world
+    build:
+      context: .
+    volumes:
+    - ./src/:/code
+    ports:
+      - 8888:8888
